@@ -25,7 +25,9 @@ SECRET_KEY = '+vrj@egopwd(u*9vdoue=njqwhzlmdu5sa@x0d!@5u3&x6ih@w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'giuliodioguardi.pythonanywhere.com',
+]
 
 
 # Application definition
