@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.views import generic
 
 from .models import Question
+from .models import Choice
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
