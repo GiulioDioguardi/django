@@ -1,0 +1,11 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
+    {% block head %}{% endblock %}
+    </head>
+    <body>
+    <p class="header"><a href="{% url 'admin:index' %}">Admin site</a></p>
+    {% block content %}{% endblock %}
+    </body>
+</html>
