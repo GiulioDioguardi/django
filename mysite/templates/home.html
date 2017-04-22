@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-HIIII
+<ul>
+{% for app in apps %}
+    <li>
+        <a href="{{ app }}">{{ app|capfirst }}</a>
+    </li>
+{% endfor %}
 {% endblock %}
