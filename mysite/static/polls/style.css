@@ -2,6 +2,10 @@ li a {
     color: green;
 }
 
+h1 {
+    color: blue;
+}
+
 body {
     background: white url("images/background-0.jpg") no-repeat;
 }
