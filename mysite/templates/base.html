@@ -1,11 +1,16 @@
 {% load staticfiles %}
 <html>
     <head>
+        <title>Giulio Django Site</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
     {% block head %}{% endblock %}
     </head>
     <body>
     <p class="header"><a href="{% url 'admin:index' %}">Admin site</a>	<a href="/">Back to start</a></p>
     {% block content %}{% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </body>
 </html>
