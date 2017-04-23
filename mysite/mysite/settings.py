@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'giuliodioguardi.pythonanywhere.com',
+    'nameless-hamlet-48070.herokuapp.com',
     "127.0.0.1",
     "192.168.2.7",
 ]
