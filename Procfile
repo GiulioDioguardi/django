@@ -1,1 +1,1 @@
-web: gunicorn mystie.wsgi --logfile -
+web: gunicorn mystie.wsgi --log-file -
