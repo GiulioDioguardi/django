@@ -86,10 +86,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-if socket.gethostname() == 'nameless-hamlet-48070.herokuapp.com':
-    import dj_database_url
-    db_from_env = dj_database_url.config()
-    DATABASES['default'].update(db_from_env)
+#if socket.gethostname() == 'nameless-hamlet-48070.herokuapp.com':
+#    import dj_database_url
+#    db_from_env = dj_database_url.config()
+#    DATABASES['default'].update(db_from_env)
 
 
 # Password validation
