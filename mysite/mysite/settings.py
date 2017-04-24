@@ -86,10 +86,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-if socket.gethostname() == '011e3d9e-20ff-4f7e-a99d-6444e79e55d6':
-    import dj_database_url
-    db_from_env = dj_database_url.config()
-    DATABASES['default'].update(db_from_env)
+#if socket.gethostname() == '011e3d9e-20ff-4f7e-a99d-6444e79e55d6':
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
