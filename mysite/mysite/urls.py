@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^bintime/', include('bintime.urls')),
 ]
