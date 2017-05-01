@@ -25,8 +25,4 @@ def handler(*args):
 if __name__ == "__main__":
     #print(get_hex_time(datetime.datetime(2017,4,30,19,31,52)))
     signal.signal(signal.SIGINT, handler)
-    while True:
-        #print(get_hex_time(datetime.datetime.now()) +
-        #    '      ', end='\r')
-        print(get_hex_time(datetime.datetime.now()))
-        time.sleep(1)
+    print(get_hex_time(datetime.datetime.now()))
