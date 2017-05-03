@@ -6,37 +6,7 @@
 
 {% block content %}
 <div id='txt'></div>
-<script type="text/javascript" src="{% static 'hextime/require.js' %}"></script>
-<script>
-window.onload = function() {
-    startTime()
-}
-
-function startTime() {
-    var script = 'hextime.py';
-    var executable = 'python';
-
-    var uint8arrayToString = function(data) {
-        return String.fromCharCode.apply(null, data);
-    };
-
-    require(['child_process'], function(child_process) {});
-
-    const spawn = require('child_process').spawn;
-    const scriptExecution = spawn(executable, [script]);
-
-    scriptExecution.stdout.on('data', (data) => {
-        document.getElementbyId('txt').innerHTML = (uint8arrayToString(data));
-    });
-
-    scriptExecution.stderr.on('data', (data) => {
-        console.log(uint8arrayToString(data));
-    });
-
-    scriptExecution.on('exit', (code) => {
-        console.log("Process quit with code : " + code);
-    });
-    var t = setTimeout(startTime, 500);
-};
-</script>
+<script type="text/javascript" src="{% static 'common.js' %}"></script>
+<script type="text/javascript" src="{% static 'hextime/hextime.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'bintime/bintime.css' %}">
 {% endblock %}
