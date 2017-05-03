@@ -6,6 +6,10 @@
 
 {% block content %}
 <p id='txt' class="wide"></p>
+<p>This clock is like a binary clock. This 24 hour clock has its values converted to binary values, but there's a twist.</p>
+<p>The hours are converted to binary, but the minutes and seconds are treated differently. They are converted to binary and concatenated together, resulting in a 12-bit code like so:</p>
+<p>"010011" + "011101" -&gt; 010011011101 -&gt; 4DD</p>
+<p>This 12-bit code is then converted to hexadecimal. Hence, hextime.</p>
 <script type="text/javascript" src="{% static 'common.js' %}"></script>
 <script type="text/javascript" src="{% static 'hextime/hextime.js' %}"></script>
 <link rel="stylesheet" type="text/css" href="{% static 'hextime/hextime.css' %}">
