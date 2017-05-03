@@ -5,7 +5,7 @@ function startTime() {
     var s = dec2bin(today.getSeconds());
     var m_s = zeroFill(m, 6) + zeroFill(s, 6);
     document.getElementById('txt').innerHTML =
-    zeroFill(h, 5) + " : " + parseInt(m_s, 2).toString(16).toUpperCase();
+    zeroFill(h, 5) + " : " + zeroFill(parseInt(m_s, 2).toString(16).toUpperCase(), 3);
     var t = setTimeout(startTime, 500);
 }
 
