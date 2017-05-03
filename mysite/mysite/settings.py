@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'hextime.apps.HextimeConfig',
+    'bintime.apps.BintimeConfig',
 ]
 
 MIDDLEWARE = [

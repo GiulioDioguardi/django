@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^hextime/', include('hextime.urls')),
+    url(r'^bintime/', include('bintime.urls')),
 ]
