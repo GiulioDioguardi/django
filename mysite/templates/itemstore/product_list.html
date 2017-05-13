@@ -4,10 +4,15 @@
 {% block content %}
 <h1>Item store</h1>
 {% if product_list %}
-    <table>
+    <table border="1">
+    <tr>
+        <th width="10%">Name</th><th>Stock</th><th>Description</th>
+    </tr>
     {% for product in product_list %}
         <tr>
-            <td>{{ product.name }}</td>
+            <td>{{ product.name|capfirst }}</td>
+            <td>{{ product.stock }}</td>
+            <td>{{ product.description }}</td>
         </tr>
     {% endfor %}
     </table>
