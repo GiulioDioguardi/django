@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'itemstore/style.css' %}" />
+{% endblock %}
+
+{% block content %}
+<h1>Item store</h1>
+{% if messages %}
+{% for message in messages %}
+<p>{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% if product_list %}
+    <table border="1" width=80%>
+    <tr>
+        <th>Name</th><th>Stock</th><th>Description</th><th>Buy?</th><th>Restock</th>
+    </tr>
+    {% for product in product_list %}
+        <tr>
+            <td>{{ product.name|capfirst }}</td>
+            <td>{{ product.stock }}</td>
+            <td>{{ product.description }}</td>
+            <td><a href="{% url 'itemstore:buy' product.id %}">Buy</a></td>
+            <td><a href="{% url 'itemstore:restock' product.id %}">Restock</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No products available<p>
+{% endif %}
+{% endblock %}

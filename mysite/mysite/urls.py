@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hextime/', include('hextime.urls')),
     url(r'^bintime/', include('bintime.urls')),
+    url(r'^itemstore/', include('itemstore.urls')),
 ]
