@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'hextime.apps.HextimeConfig',
     'bintime.apps.BintimeConfig',
+    'itemstore.apps.ItemstoreConfig',
 ]
 
 MIDDLEWARE = [
