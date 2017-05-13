@@ -6,8 +6,10 @@
 
 {% block content %}
 <h1>Item store</h1>
-{% if confirm %}
-<p>{{ confirm }}</p>
+{% if messages %}
+{% for message in messages %}
+<p>{{ message }}</p>
+{% endfor %}
 {% endif %}
 {% if product_list %}
     <table border="1" width=80%>
