@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.http import HttpResponse
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic.base import TemplateView
@@ -26,5 +27,5 @@ urlpatterns = [
     url(r'^hextime/', include('hextime.urls')),
     url(r'^bintime/', include('bintime.urls')),
     url(r'^itemstore/', include('itemstore.urls')),
-    url(r'^googlee7941072fd1ee0cb\.html$', lambda r: HttpResponse("google-site-verification: googlee7941072fd1ee0cb.html", mimetype="text/plain")),
+    url(r'^googlee7941072fd1ee0cb\.html$', lambda r: HttpResponse("google-site-verification: googlee7941072fd1ee0cb.html")),
 ]
