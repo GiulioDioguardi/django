@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^hextime/', include('hextime.urls')),
     url(r'^bintime/', include('bintime.urls')),
     url(r'^itemstore/', include('itemstore.urls')),
+    url(r'^googlee7941072fd1ee0cb\.html$', lambda r: HttpResponse("google-site-verification: googlee7941072fd1ee0cb.html", mimetype="text/plain")),
 ]
