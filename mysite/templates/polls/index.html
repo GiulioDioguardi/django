@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
 {% endblock %}
 {% block content %}
-<h1>Availible Polls</h1>
+<h1>Available Polls</h1>
 {% if question_list %}
     <ul>
     {% for question in question_list %}
@@ -12,6 +12,6 @@
     {% endfor %}
     </ul>
 {% else %}
-    <p>No polls availible</p>
+    <p>No polls available</p>
 {% endif %}   
 {% endblock %}
