@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/local/bin/python3.4 manage.py $@
+/usr/local/bin/python3.4 $(dirname $0)/manage.py $@
