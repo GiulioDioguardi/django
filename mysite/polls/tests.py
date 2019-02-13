@@ -14,7 +14,7 @@ class QuestionViewTests(TestCase):
     def test_index_view_with_no_questions(self):
         response = self.client.get(reverse('polls:index'))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "No polls availible")
+        self.assertContains(response, "No polls available")
         self.assertQuerysetEqual(response.context['question_list'], [])
 
     def test_index_view_with_a_past_question(self):
@@ -28,7 +28,7 @@ class QuestionViewTests(TestCase):
     def test_index_view_with_a_future_question(self):
         create_question(question_text="Future question.", days=30)
         response = self.client.get(reverse('polls:index'))
-        self.assertContains(response, "No polls availible")
+        self.assertContains(response, "No polls available")
         self.assertQuerysetEqual(response.context['question_list'], [])
 
     def test_index_view_with_future_question_and_past_question(self):
